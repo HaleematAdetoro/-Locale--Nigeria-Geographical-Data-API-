@@ -30,7 +30,7 @@ function getStates(req, res, next) {
   try {
     const states = nigeriaLocations.states();
     return res.status(200).json({
-      success: true,
+      status: "success",
       message: "List of States",
       data: {
         size: states.length,
@@ -47,7 +47,7 @@ function getLocalGovernmentArea(req, res, next) {
     const LGAs = new Set(nigeriaLocations.all().flatMap((state) => state.lgas));
 
     return res.status(200).json({
-      success: true,
+      status: "success",
       message: "List of Local Government Areas (LGAs)",
       data: {
         size: LGAs.size,
@@ -146,7 +146,7 @@ async function search(req, res, next) {
       });
     }
     return res.status(200).json({
-      success: true,
+      status: "success",
       message: "Search results",
       data: cacheData.data,
     });

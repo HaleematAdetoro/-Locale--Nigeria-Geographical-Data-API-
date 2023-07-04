@@ -9,7 +9,7 @@ const locationRouter = express.Router();
 
 /**
  * @swagger
- * /api/v1/get_new_key:
+ * /api/v1/location/get_new_key:
  *   get:
  *     summary: Regenerate API key
  *     tags: [location]
@@ -72,7 +72,7 @@ locationRouter.get(
 
 /**
  * @swagger
- * /api/v1/regions:
+ * /api/v1/location/regions:
  *   get:
  *     summary: Get a list of all regions in Nigeria
  *     tags: [location]
@@ -131,7 +131,7 @@ locationRouter.get("/regions", verifyAPIKey, locationController.getRegions);
 
 /**
  * @swagger
- * /api/v1/states:
+ * /api/v1/location/states:
  *   get:
  *     summary: Get a list of all states in Nigeria
  *     tags: [location]
@@ -190,7 +190,7 @@ locationRouter.get("/states", verifyAPIKey, locationController.getStates);
 
 /**
  * @swagger
- * /api/v1/lgas:
+ * /api/v1/location/lgas:
  *   get:
  *     summary: Get a list of all Local Government Areas in Nigeria
  *     tags: [location]
@@ -254,7 +254,7 @@ locationRouter.get(
 
 /**
  * @swagger
- * /api/v1/search/{id}:
+ * /api/v1/location/search/{id}:
  *   get:
  *     summary: It allows for search about Nigeria based on region state and LGA
  *     tags: [location]

@@ -13,7 +13,7 @@ const User = require("../models/usermodel")
 
 /**
  * @swagger
- *   /auth/signup:
+ *   /api/v1/auth/signup:
  *     post:
  *       summary: Sign up user
  *       tags: [signup]
@@ -48,7 +48,7 @@ Router.post("/signup", validatorsMw("signup"), authController.signup);
 
 /**
  * @swagger
- *   /auth/login:
+ *   /api/v1/auth/login:
  *     post:
  *       summary: login user
  *       tags: [login]

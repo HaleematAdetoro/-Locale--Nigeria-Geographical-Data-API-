@@ -34,8 +34,8 @@ app.use(passport.initialize());
 
 app.disable("x-powered-by"); // less hackers know about our stack
 
-app.use("/auth", authRouter);
-app.use("/api/v1", locationRouter);
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/location", locationRouter);
 
 app.get("/", (req, res) => {
   return res.status(200).json({
